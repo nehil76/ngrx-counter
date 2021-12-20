@@ -1,8 +1,11 @@
+import { Injectable } from "@angular/core";
+import { Store } from "@ngrx/store";
 
 export interface CounterState {
-    counter:number
+    count:number
 }
 
 export const initialCounterState :CounterState = {
-    counter:0
+    count:0
 }
+

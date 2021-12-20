@@ -19,7 +19,7 @@ import { FormsModule } from '@angular/forms';
     CustomIncrementCounterComponent
   ],
   imports: [
-    BrowserModule,FormsModule,StoreModule.forRoot({counter:counterReduccer})
+    BrowserModule,FormsModule,StoreModule.forRoot({count:counterReduccer})
   ],
   providers: [],
   bootstrap: [AppComponent]
