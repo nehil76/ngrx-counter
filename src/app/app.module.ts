@@ -9,6 +9,8 @@ import { StoreModule } from '@ngrx/store';
 import { counterReduccer } from './counter/counter.reducer';
 import { CustomIncrementCounterComponent } from './counter/custom-increment-counter/custom-increment-counter.component';
 import { FormsModule } from '@angular/forms';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     CustomIncrementCounterComponent
   ],
   imports: [
-    BrowserModule,FormsModule,StoreModule.forRoot({count:counterReduccer})
+    BrowserModule, FormsModule, StoreModule.forRoot({ count: counterReduccer }),
+    StoreDevtoolsModule.instrument({ logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
